@@ -1,7 +1,7 @@
 <div class="page-header">
   <h1>
     Copays
-    <a href="/copays/new" class="btn btn-lg btn-success">New Copay</a>
+    <a href="/copays/new" class="btn btn-lg btn-success">Submit New Copay Card</a>
   </h1>
 </div>
 
@@ -18,7 +18,7 @@
         <th>Actions</th>
       </tr>
 
-      <% @copays.each do |copay| %>
+      <% @copays.sort {|a,b| a.name <=> b.name }.each do |copay| %>
       <tr>
         <td><%= copay.name %></td>
         <td><%= copay.pay_as_little_as %></td>
